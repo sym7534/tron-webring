@@ -4,7 +4,10 @@ import members from "@/data/members.json";
 
 export const metadata: Metadata = {
   title: "Webring",
-  description: "A webring for friends",
+  description: "webring",
+  icons: {
+    icon: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
@@ -14,6 +17,7 @@ export default function RootLayout({
 }) {
   const sites = members.sites.map(s => s.website);
 
+  // javscript script that runs before rendering the actual page to redirect
   const navScript = `
     (function() {
       var sites = ${JSON.stringify(sites)};
