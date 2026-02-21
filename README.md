@@ -85,7 +85,7 @@ Files are in `public/` and can be used directly from the site root:
 - `trontransparent.png`
 - `waterloo.png`
 
-## Demo
+## Example
 
 <p align="center">
   <img src="./public/example.png" alt="Webring widget demo" width="360" />
