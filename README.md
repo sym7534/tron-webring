@@ -1,14 +1,14 @@
 # Tron Webring
 
 <p align="center">
-  <img src="./public/trontransparent.png" alt="Tron Webring logo" height="140" />
+  <img src="./public/logogreywhite.png" alt="Tron Webring logo" height="170" />
 </p>
 
 ## Overview
 
-A webring for University of Waterloo Mechatronics Engineering students and alumni. Webrings are a classic way to link personal sites in a ring so visitors can discover more people in the community.
+A webring for University of Waterloo Mechatronics Engineering students and alumni. Webrings link personal sites in a ring so visitors can discover more people in the community.
 
-This site also supports prev/next navigation via URL hash routing (see the widget template below).
+This site supports prev/next navigation via URL hash routing (see the widget template below).
 
 ## How to Join
 
@@ -37,11 +37,15 @@ Replace `WEBRING_BASE_URL` with the live site domain (for example, your Vercel o
 
 ```html
 <div style="display:flex;align-items:center;gap:10px;">
-  <a href="WEBRING_BASE_URL/#your-site.com?nav=prev" aria-label="Previous site">←</a>
-  <a href="WEBRING_BASE_URL/#your-site.com" target="_blank" rel="noreferrer">
-    <img src="WEBRING_BASE_URL/trontransparent.png" alt="Tron Webring" style="width:24px;height:auto;" />
+  <a href="WEBRING_BASE_URL/#your-site.com?nav=prev" aria-label="Previous site">
+    <img src="WEBRING_BASE_URL/leftarrow.png" alt="Previous" style="width:18px;height:auto;" />
   </a>
-  <a href="WEBRING_BASE_URL/#your-site.com?nav=next" aria-label="Next site">→</a>
+  <a href="WEBRING_BASE_URL/#your-site.com" target="_blank" rel="noreferrer">
+    <img src="WEBRING_BASE_URL/logoblack.png" alt="Tron Webring" style="width:36px;height:auto;" />
+  </a>
+  <a href="WEBRING_BASE_URL/#your-site.com?nav=next" aria-label="Next site">
+    <img src="WEBRING_BASE_URL/rightarrow.png" alt="Next" style="width:18px;height:auto;" />
+  </a>
 </div>
 ```
 
@@ -49,27 +53,42 @@ Replace `WEBRING_BASE_URL` with the live site domain (for example, your Vercel o
 
 ```jsx
 <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-  <a href="WEBRING_BASE_URL/#your-site.com?nav=prev" aria-label="Previous site">←</a>
+  <a href="WEBRING_BASE_URL/#your-site.com?nav=prev" aria-label="Previous site">
+    <img src="WEBRING_BASE_URL/leftarrow.png" alt="Previous" style={{ width: 18, height: "auto" }} />
+  </a>
   <a href="WEBRING_BASE_URL/#your-site.com" target="_blank" rel="noreferrer">
     <img
-      src="WEBRING_BASE_URL/trontransparent.png"
+      src="WEBRING_BASE_URL/logoblack.png"
       alt="Tron Webring"
-      style={{ width: 24, height: "auto" }}
+      style={{ width: 36, height: "auto" }}
     />
   </a>
-  <a href="WEBRING_BASE_URL/#your-site.com?nav=next" aria-label="Next site">→</a>
+  <a href="WEBRING_BASE_URL/#your-site.com?nav=next" aria-label="Next site">
+    <img src="WEBRING_BASE_URL/rightarrow.png" alt="Next" style={{ width: 18, height: "auto" }} />
+  </a>
 </div>
 ```
 
 ## Assets
 
-Logos live in `public/` and can be used directly from the site root:
+Files are in `public/` and can be used directly from the site root:
 
+- `example.png` (widget demo)
+- `leftarrow.png`
+- `rightarrow.png`
+- `logoblack.png`
+- `logogreywhite.png`
 - `tronblack.png`
 - `tronorange.png`
 - `tronorangeonblack.png`
 - `trontransparent.png`
 - `waterloo.png`
+
+## Demo
+
+<p align="center">
+  <img src="./public/example.png" alt="Webring widget demo" width="360" />
+</p>
 
 ## Local Development
 
