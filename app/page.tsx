@@ -62,8 +62,7 @@ export default function Home() {
           </h1>
           <p className="text-[16px] text-[#777] leading-[1.6] max-w-[480px]">
             A curated directory of personal websites by University of Waterloo
-            Mechatronics Engineering graduates and students. Connecting Tron
-            across every cohort.
+            Mechatronics Engineering graduates and students. Tron on top.
           </p>
           <RandomSiteButton />
         </div>
