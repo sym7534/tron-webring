@@ -20,7 +20,8 @@ export const metadata: Metadata = {
   description:
     "A curated directory of personal websites by University of Waterloo Mechatronics Engineering graduates and students.",
   icons: {
-    icon: "/favicon.png",
+    icon: "/faviconmaxsize.png",
+    apple: "/faviconmaxsize.png",
   },
 };
 

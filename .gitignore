@@ -9,3 +9,5 @@ npm-debug.log*
 *.tsbuildinfo
 shinytext.md 
 others.md
+
+.claude/

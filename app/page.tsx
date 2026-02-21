@@ -17,6 +17,7 @@ export default function Home() {
       <header className="flex items-center justify-between px-16 py-5 border-b border-[#E5E2DC]">
         <div className="flex items-center gap-3">
           <img src="/waterloo.png" alt="Waterloo" className="h-10" />
+          <img src="/logoblack.png" alt="Tron Webring" className="h-10" />
           <span className="font-serif text-sm leading-tight">
             uwaterloo<br />tron webring
           </span>
