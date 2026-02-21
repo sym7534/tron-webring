@@ -112,7 +112,7 @@ export default function Home() {
         <div className="flex flex-col gap-6">
           <div className="flex items-center justify-between pt-4 border-t border-[#E5E2DC]">
             <h2 className="font-serif italic font-semibold text-[22px] tracking-[0.5px]">
-              Recent members
+              Members
             </h2>
             <span className="text-[13px] text-[#777]">View all</span>
           </div>
