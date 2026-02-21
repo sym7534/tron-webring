@@ -70,7 +70,7 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: navScript }} />
       </head>
-      <body className="font-sans bg-[#FDFCF9] text-[#1A1A1A]">
+      <body className="font-sans bg-[#FDFCF9] text-[#1A1A1A] overflow-x-hidden">
         {children}
       </body>
     </html>

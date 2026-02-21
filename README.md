@@ -6,7 +6,7 @@
 
 ## Overview
 
-A webring for University of Waterloo Mechatronics Engineering students and alumni. Webrings link personal sites in a ring so visitors can discover more people in the community. Live site: https://tronring.vercel.app
+A webring for University of Waterloo Mechatronics Engineering students and alumni. Webrings link personal sites in a ring so visitors can discover more people in the community. Live site: https://tronring.com
 
 This site supports prev/next navigation via URL hash routing (see the widget template below).
 
@@ -25,26 +25,26 @@ This site supports prev/next navigation via URL hash routing (see the widget tem
   "website": "https://your-site.com",
   "url": "your-site.com",
   "class": "Class of 20XX",
-  "status": "Active"
+  "description": ""
 }
 ```
 
 ## Widget Template
 
-Use `https://tronring.vercel.app` as the base URL.
+Use `https://tronring.com` as the base URL.
 
 ### HTML
 
 ```html
 <div style="display:flex;align-items:center;gap:10px;">
-  <a href="https://tronring.vercel.app/#your-site.com?nav=prev" aria-label="Previous site">
-    <img src="https://tronring.vercel.app/leftarrow.png" alt="Previous" style="width:18px;height:auto;" />
+  <a href="https://tronring.com/#your-site.com?nav=prev" aria-label="Previous site">
+    <img src="https://tronring.com/leftarrow.png" alt="Previous" style="width:18px;height:auto;" />
   </a>
-  <a href="https://tronring.vercel.app/#your-site.com" target="_blank" rel="noreferrer">
-    <img src="https://tronring.vercel.app/logoblack.png" alt="Tron Webring" style="width:36px;height:auto;" />
+  <a href="https://tronring.com/#your-site.com" target="_blank" rel="noreferrer">
+    <img src="https://tronring.com/logoblack.png" alt="Tron Webring" style="width:36px;height:auto;" />
   </a>
-  <a href="https://tronring.vercel.app/#your-site.com?nav=next" aria-label="Next site">
-    <img src="https://tronring.vercel.app/rightarrow.png" alt="Next" style="width:18px;height:auto;" />
+  <a href="https://tronring.com/#your-site.com?nav=next" aria-label="Next site">
+    <img src="https://tronring.com/rightarrow.png" alt="Next" style="width:18px;height:auto;" />
   </a>
 </div>
 ```
@@ -53,18 +53,18 @@ Use `https://tronring.vercel.app` as the base URL.
 
 ```jsx
 <div style={{ display: "flex", alignItems: "center", gap: "10px" }}>
-  <a href="https://tronring.vercel.app/#your-site.com?nav=prev" aria-label="Previous site">
-    <img src="https://tronring.vercel.app/leftarrow.png" alt="Previous" style={{ width: 18, height: "auto" }} />
+  <a href="https://tronring.com/#your-site.com?nav=prev" aria-label="Previous site">
+    <img src="https://tronring.com/leftarrow.png" alt="Previous" style={{ width: 18, height: "auto" }} />
   </a>
-  <a href="https://tronring.vercel.app/#your-site.com" target="_blank" rel="noreferrer">
+  <a href="https://tronring.com/#your-site.com" target="_blank" rel="noreferrer">
     <img
-      src="https://tronring.vercel.app/logoblack.png"
+      src="https://tronring.com/logoblack.png"
       alt="Tron Webring"
       style={{ width: 36, height: "auto" }}
     />
   </a>
-  <a href="https://tronring.vercel.app/#your-site.com?nav=next" aria-label="Next site">
-    <img src="https://tronring.vercel.app/rightarrow.png" alt="Next" style={{ width: 18, height: "auto" }} />
+  <a href="https://tronring.com/#your-site.com?nav=next" aria-label="Next site">
+    <img src="https://tronring.com/rightarrow.png" alt="Next" style={{ width: 18, height: "auto" }} />
   </a>
 </div>
 ```

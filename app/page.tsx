@@ -1,4 +1,5 @@
 import members from "@/data/members.json";
+import RandomSiteButton from "@/components/RandomSiteButton";
 
 function getInitials(name: string) {
   return name
@@ -9,16 +10,6 @@ function getInitials(name: string) {
     .slice(0, 2);
 }
 
-function StatusBadge({ status }: { status: string }) {
-  const color =
-    status === "Active"
-      ? "text-green-500"
-      : status === "Pending"
-        ? "text-amber-500"
-        : "text-[#999]";
-  return <span className={`text-[13px] font-medium ${color}`}>{status}</span>;
-}
-
 export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
@@ -26,8 +17,8 @@ export default function Home() {
       <header className="flex items-center justify-between px-16 py-5 border-b border-[#E5E2DC]">
         <div className="flex items-center gap-3">
           <img src="/waterloo.png" alt="Waterloo" className="h-10" />
-          <span className="font-serif text-lg font-bold tracking-[2px]">
-            TRON WEBRING
+          <span className="font-serif text-sm leading-tight">
+            uwaterloo<br />tron webring
           </span>
         </div>
         <div className="flex items-center gap-4">
@@ -63,9 +54,9 @@ export default function Home() {
       </header>
 
       {/* ── Hero Section ── */}
-      <section className="flex items-center justify-between px-16 py-10 overflow-hidden">
-        <div className="flex flex-col gap-[18px]">
-          <h1 className="font-serif italic font-medium text-[72px] leading-[1.05] tracking-[-2px] max-w-[700px]">
+      <section className="flex items-center px-16 py-10 overflow-hidden">
+        <div className="flex flex-col gap-[18px] shrink">
+          <h1 className="font-serif italic font-medium text-[72px] leading-[1.05] tracking-[-2px]">
             The Mechatronics{"\n"}Engineering Webring
           </h1>
           <p className="text-[16px] text-[#777] leading-[1.6] max-w-[480px]">
@@ -73,45 +64,27 @@ export default function Home() {
             Mechatronics Engineering graduates and students. Connecting Tron
             across every cohort.
           </p>
+          <RandomSiteButton />
         </div>
-        <img
-          src="/faviconhq.png"
-          alt=""
-          className="w-[340px] h-[340px] object-contain rotate-[20deg] opacity-100 shrink-0 -mr-8"
-        />
+        <div className="flex items-center justify-center shrink-0 ml-8">
+          <img
+            src="/faviconhq.png"
+            alt=""
+            className="w-[340px] h-[340px] object-contain rotate-[20deg]"
+          />
+        </div>
       </section>
 
-      {/* ── Key Metrics ── */}
-      <section className="px-16 flex flex-col gap-2">
-        <div className="pt-2 border-t border-[#E5E2DC]">
-          <h2 className="font-serif italic font-semibold text-[22px] tracking-[0.5px]">
-            Key metrics
-          </h2>
+      {/* ── Stats ── */}
+      <div className="px-16">
+        <div className="py-2 border-t border-[#E5E2DC] flex items-center gap-6 text-[13px] text-[#777]">
+          <span>Total members: <span className="text-[#1A1A1A] font-medium">{members.sites.length}</span></span>
+          <span>Grad classes: <span className="text-[#1A1A1A] font-medium">{new Set(members.sites.map((s) => s.class)).size}</span></span>
         </div>
-        <div className="flex bg-[#E5E2DC] gap-px">
-          <div className="bg-[#FDFCF9] flex-1 flex flex-col gap-2 py-2 pr-5">
-            <span className="text-[13px] text-[#777]">Total members</span>
-            <span className="text-[28px] font-semibold tracking-[-1px]">
-              {members.sites.length}
-            </span>
-          </div>
-          <div className="bg-[#FDFCF9] flex-1 flex flex-col gap-2 py-2 px-5">
-            <span className="text-[13px] text-[#777]">Grad classes</span>
-            <span className="text-[28px] font-semibold tracking-[-1px]">
-              {new Set(members.sites.map((s) => s.class)).size}
-            </span>
-          </div>
-          <div className="bg-[#FDFCF9] flex-1 flex flex-col gap-2 py-2 px-5">
-            <span className="text-[13px] text-[#777]">Sites in ring</span>
-            <span className="text-[28px] font-semibold tracking-[-1px]">
-              {members.sites.length}
-            </span>
-          </div>
-        </div>
-      </section>
+      </div>
 
       {/* ── Members Section ── */}
-      <section className="px-16 mt-4">
+      <section className="px-16 mt-1">
         <div className="flex flex-col gap-6">
           <div className="flex items-center justify-between pt-4 border-t border-[#E5E2DC]">
             <h2 className="font-serif italic font-semibold text-[22px] tracking-[0.5px]">
@@ -125,7 +98,7 @@ export default function Home() {
                 key={member.website}
                 className="flex items-center justify-between py-4 border-b border-[#E5E2DC]"
               >
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-3 shrink-0">
                   <div className="w-8 h-8 bg-[#E8E5DF] flex items-center justify-center shrink-0">
                     <span className="text-[11px] font-semibold text-[#666]">
                       {getInitials(member.name)}
@@ -143,12 +116,12 @@ export default function Home() {
                     </a>
                   </div>
                 </div>
-                <div className="flex items-center gap-4">
-                  <StatusBadge status={member.status} />
-                  <span className="text-[13px] text-[#777] font-medium w-[120px] text-right">
-                    {member.class}
-                  </span>
-                </div>
+                <span className="text-[13px] text-[#777] font-serif italic flex-1 px-4 truncate text-center">
+                  {member.description}
+                </span>
+                <span className="text-[13px] text-[#777] font-medium shrink-0 text-right">
+                  {member.class}
+                </span>
               </div>
             ))}
           </div>
