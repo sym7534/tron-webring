@@ -1,4 +1,4 @@
-# Tron Webring
+# Waterloo Tron Webring
 
 <p align="center">
   <img src="./public/logogreywhite.png" alt="Tron Webring logo" height="170" />
