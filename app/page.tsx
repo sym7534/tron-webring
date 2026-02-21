@@ -14,15 +14,15 @@ export default function Home() {
   return (
     <div className="min-h-screen flex flex-col">
       {/* ── Masthead ── */}
-      <header className="flex items-center justify-between px-16 py-5 border-b border-[#E5E2DC]">
+      <header className="flex items-center justify-between px-6 md:px-16 py-5 border-b border-[#E5E2DC]">
         <div className="flex items-center gap-3">
           <img src="/waterloo.png" alt="Waterloo" className="h-10" />
           <img src="/logoblack.png" alt="Tron Webring" className="h-10" />
-          <span className="font-serif text-sm leading-tight">
+          <span className="hidden sm:block font-serif text-sm leading-tight">
             uwaterloo<br />tron webring
           </span>
         </div>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 md:gap-4">
           {/* Join button */}
           <a
             href="https://github.com/sym7534/tron-webring"
@@ -55,9 +55,9 @@ export default function Home() {
       </header>
 
       {/* ── Hero Section ── */}
-      <section className="flex items-center px-16 py-10 overflow-hidden">
+      <section className="flex flex-col md:flex-row md:items-center px-6 md:px-16 py-6 md:py-10 overflow-hidden">
         <div className="flex flex-col gap-[18px] shrink">
-          <h1 className="font-serif italic font-medium text-[72px] leading-[1.05] tracking-[-2px]">
+          <h1 className="font-serif italic font-medium text-[36px] md:text-[72px] leading-[1.05] tracking-[-1px] md:tracking-[-2px]">
             The Mechatronics{"\n"}Engineering Webring
           </h1>
           <p className="text-[16px] text-[#777] leading-[1.6] max-w-[480px]">
@@ -67,7 +67,7 @@ export default function Home() {
           </p>
           <RandomSiteButton />
         </div>
-        <div className="flex items-center justify-center shrink-0 ml-8">
+        <div className="hidden md:flex items-center justify-center shrink-0 ml-8">
           <img
             src="/faviconhq.png"
             alt=""
@@ -77,15 +77,15 @@ export default function Home() {
       </section>
 
       {/* ── Stats ── */}
-      <div className="px-16">
-        <div className="py-2 border-t border-[#E5E2DC] flex items-center gap-6 text-[13px] text-[#777]">
+      <div className="px-6 md:px-16">
+        <div className="py-2 border-t border-[#E5E2DC] flex items-center gap-4 md:gap-6 text-[13px] text-[#777]">
           <span>Total members: <span className="text-[#1A1A1A] font-medium">{members.sites.length}</span></span>
           <span>Grad classes: <span className="text-[#1A1A1A] font-medium">{new Set(members.sites.map((s) => s.class)).size}</span></span>
         </div>
       </div>
 
       {/* ── Members Section ── */}
-      <section className="px-16 mt-1">
+      <section className="px-6 md:px-16 mt-1">
         <div className="flex flex-col gap-6">
           <div className="flex items-center justify-between pt-4 border-t border-[#E5E2DC]">
             <h2 className="font-serif italic font-semibold text-[22px] tracking-[0.5px]">
@@ -117,7 +117,7 @@ export default function Home() {
                     </a>
                   </div>
                 </div>
-                <span className="text-[13px] text-[#777] font-serif italic flex-1 px-4 truncate text-center">
+                <span className="hidden md:block text-[13px] text-[#777] font-serif italic flex-1 px-4 truncate text-center">
                   {member.description}
                 </span>
                 <span className="text-[13px] text-[#777] font-medium shrink-0 text-right">
@@ -131,9 +131,9 @@ export default function Home() {
       </section>
 
       {/* ── Join Banner ── */}
-      <section className="px-16 mt-10">
-        <div className="flex items-center justify-between px-6 py-4 border border-[#E5E2DC]">
-          <div className="flex items-center gap-4">
+      <section className="px-6 md:px-16 mt-10">
+        <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 px-4 sm:px-6 py-4 border border-[#E5E2DC]">
+          <div className="flex items-center gap-3 sm:gap-4">
             <a
               href="https://github.com/sym7534/tron-webring"
               className="bg-[#1A1A1A] text-white text-[9px] font-bold tracking-[1px] px-[10px] py-1"
@@ -155,7 +155,7 @@ export default function Home() {
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
-            className="shrink-0"
+            className="hidden sm:block shrink-0"
           >
             <line x1="18" y1="6" x2="6" y2="18" />
             <line x1="6" y1="6" x2="18" y2="18" />

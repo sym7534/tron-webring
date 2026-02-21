@@ -19,7 +19,7 @@ export default function RandomSiteButton() {
         color="#999"
         shineColor="#1A1A1A"
         spread={120}
-        className="text-[15px] font-medium font-serif italic"
+        className="text-[14px] md:text-[15px] font-medium font-serif italic"
       />
     </button>
   );
