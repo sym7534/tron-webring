@@ -1,7 +1,7 @@
 # Tron Webring
 
 <p align="center">
-  <img src="./public/tronorangeonblack.png" alt="Tron Webring logo" height="140" />
+  <img src="./public/trontransparent.png" alt="Tron Webring logo" height="140" />
 </p>
 
 ## Overview
@@ -39,7 +39,7 @@ Replace `WEBRING_BASE_URL` with the live site domain (for example, your Vercel o
 <div style="display:flex;align-items:center;gap:10px;">
   <a href="WEBRING_BASE_URL/#your-site.com?nav=prev" aria-label="Previous site">←</a>
   <a href="WEBRING_BASE_URL/#your-site.com" target="_blank" rel="noreferrer">
-    <img src="WEBRING_BASE_URL/tronorangeonblack.png" alt="Tron Webring" style="width:24px;height:auto;" />
+    <img src="WEBRING_BASE_URL/trontransparent.png" alt="Tron Webring" style="width:24px;height:auto;" />
   </a>
   <a href="WEBRING_BASE_URL/#your-site.com?nav=next" aria-label="Next site">→</a>
 </div>
@@ -52,7 +52,7 @@ Replace `WEBRING_BASE_URL` with the live site domain (for example, your Vercel o
   <a href="WEBRING_BASE_URL/#your-site.com?nav=prev" aria-label="Previous site">←</a>
   <a href="WEBRING_BASE_URL/#your-site.com" target="_blank" rel="noreferrer">
     <img
-      src="WEBRING_BASE_URL/tronorangeonblack.png"
+      src="WEBRING_BASE_URL/trontransparent.png"
       alt="Tron Webring"
       style={{ width: 24, height: "auto" }}
     />
