@@ -32,7 +32,10 @@ export default function Home() {
         </div>
         <div className="flex items-center gap-4">
           {/* Join button */}
-          <button className="flex items-center gap-2 bg-[#1A1A1A] text-white px-4 py-2">
+          <a
+            href="https://github.com/sym7534/tron-webring"
+            className="flex items-center gap-2 bg-[#1A1A1A] text-white px-4 py-2"
+          >
             <svg
               width="14"
               height="14"
@@ -49,11 +52,10 @@ export default function Home() {
             <span className="text-[11px] font-semibold tracking-[1px]">
               JOIN
             </span>
+          </a>
+          <button className="w-20 h-8 bg-[#E8E5DF] flex items-center justify-center text-[11px] font-semibold text-[#666] tracking-[1px]">
+            ASSETS
           </button>
-          {/* Avatar */}
-          <div className="w-8 h-8 bg-[#E8E5DF] flex items-center justify-center">
-            <span className="text-[11px] font-semibold text-[#666]">MR</span>
-          </div>
         </div>
       </header>
 
@@ -155,9 +157,12 @@ export default function Home() {
       <section className="px-16 mt-10">
         <div className="flex items-center justify-between px-6 py-4 border border-[#E5E2DC]">
           <div className="flex items-center gap-4">
-            <span className="bg-[#1A1A1A] text-white text-[9px] font-bold tracking-[1px] px-[10px] py-1">
+            <a
+              href="https://github.com/sym7534/tron-webring"
+              className="bg-[#1A1A1A] text-white text-[9px] font-bold tracking-[1px] px-[10px] py-1"
+            >
               OPEN
-            </span>
+            </a>
             <span className="text-[13px] text-[#666]">
               The Tron Ring is open to all UWaterloo Mechatronics Engineering
               students and alumni. Add your personal website to join.
