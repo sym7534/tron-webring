@@ -26,7 +26,7 @@ This site supports prev/next navigation via URL hash routing (see the widget tem
   "website": "https://your-site.com",
   "url": "your-site.com",
   "class": "Class of 20XX",
-  "description": ""
+  "description": "something cool about you"
 }
 ```
 
