@@ -53,9 +53,12 @@ export default function Home() {
               JOIN
             </span>
           </a>
-          <button className="w-20 h-8 bg-[#E8E5DF] flex items-center justify-center text-[11px] font-semibold text-[#666] tracking-[1px]">
+          <a
+            href="https://github.com/sym7534/tron-webring/tree/main/public"
+            className="w-20 h-8 bg-[#E8E5DF] flex items-center justify-center text-[11px] font-semibold text-[#666] tracking-[1px]"
+          >
             ASSETS
-          </button>
+          </a>
         </div>
       </header>
 
