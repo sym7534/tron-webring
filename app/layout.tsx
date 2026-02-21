@@ -1,10 +1,24 @@
 import type { Metadata } from "next";
+import { Playfair_Display, Inter } from "next/font/google";
 import "./globals.css";
 import members from "@/data/members.json";
 
+const playfair = Playfair_Display({
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
 export const metadata: Metadata = {
-  title: "Webring",
-  description: "webring",
+  title: "Tron Ring",
+  description:
+    "A curated directory of personal websites by University of Waterloo Mechatronics Engineering graduates and students.",
   icons: {
     icon: "/favicon.png",
   },
@@ -15,7 +29,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  const sites = members.sites.map(s => s.website);
+  const sites = members.sites.map((s) => s.website);
 
   // javscript script that runs before rendering the actual page to redirect
   const navScript = `
@@ -52,11 +66,11 @@ export default function RootLayout({
   `;
 
   return (
-    <html lang="en">
+    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: navScript }} />
       </head>
-      <body>
+      <body className="font-sans bg-[#FDFCF9] text-[#1A1A1A]">
         {children}
       </body>
     </html>

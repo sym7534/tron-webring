@@ -3,12 +3,16 @@
     {
       "name": "ryan wang",
       "website": "https://wangdynasty.ca",
-      "description": ""
+      "url": "wangdynasty.ca",
+      "class": "Class of 2025",
+      "status": "Active"
     },
     {
       "name": "eric wu",
       "website": "https://ericwu.work",
-      "description": ""
+      "url": "ericwu.work",
+      "class": "Class of 2025",
+      "status": "Active"
     }
   ]
 }
