@@ -23,6 +23,27 @@ export const metadata: Metadata = {
     icon: "/faviconmaxsize.png",
     apple: "/faviconmaxsize.png",
   },
+  openGraph: {
+    title: "Tron Ring",
+    description:
+      "A curated directory of personal websites by University of Waterloo Mechatronics Engineering graduates and students.",
+    url: "https://tronring.com",
+    siteName: "Tron Ring",
+    images: [
+      {
+        url: "/faviconhq.png",
+        width: 512,
+        height: 512,
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "Tron Ring",
+    description:
+      "A curated directory of personal websites by University of Waterloo Mechatronics Engineering graduates and students.",
+    images: ["/faviconhq.png"],
+  },
 };
 
 export default function RootLayout({
