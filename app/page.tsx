@@ -98,7 +98,7 @@ export default function Home() {
       {/* ── Stats ── */}
       <div className="mx-6 md:mx-20 border-t border-white/[0.08]">
         <div className="py-4 flex items-center gap-2 text-[12px] text-light/50 font-mono tracking-[1px] uppercase">
-          {[...new Set(members.sites.map((s) => s.class))].map((cls, i) => (
+          {Array.from(new Set(members.sites.map((s) => s.class))).map((cls, i) => (
             <span key={cls}>
               {i > 0 && <span> &amp; </span>}
               <span className="text-brass">{cls}</span>
