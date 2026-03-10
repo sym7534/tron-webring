@@ -129,11 +129,19 @@ export default function Home() {
               className="member-row flex items-center justify-between px-6 md:px-20 py-5 border-b border-white/[0.06]"
             >
               <div className="flex items-center gap-3 shrink-0">
-                <div className="w-9 h-9 border border-brass/30 flex items-center justify-center shrink-0">
-                  <span className="text-[11px] text-brass font-mono tracking-[1px]">
-                    {getInitials(member.name)}
-                  </span>
-                </div>
+                {member.icon ? (
+                  <img
+                    src={member.icon}
+                    alt={member.name}
+                    className="w-9 h-9 object-cover shrink-0 border border-brass/30"
+                  />
+                ) : (
+                  <div className="w-9 h-9 border border-brass/30 flex items-center justify-center shrink-0">
+                    <span className="text-[11px] text-brass font-mono tracking-[1px]">
+                      {getInitials(member.name)}
+                    </span>
+                  </div>
+                )}
                 <div className="flex flex-col gap-1">
                   <span className="text-[14px] text-light font-medium capitalize">
                     {member.name}

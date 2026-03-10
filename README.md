@@ -26,9 +26,12 @@ This site supports prev/next navigation via URL hash routing (see the widget tem
   "website": "https://your-site.com",
   "url": "your-site.com",
   "class": "Class of 20XX",
-  "description": "something cool about you"
+  "description": "something cool about you",
+  "icon": "/icons/your-name.png"
 }
 ```
+
+`description` and `icon` are optional — leave them as `""` to skip. If `icon` is set, it replaces the default initials badge on your row. Upload your icon to `public/icons/` (square, ideally 64x64 or larger).
 
 ## Widget Template
 

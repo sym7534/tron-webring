@@ -5,21 +5,24 @@
       "website": "https://wangdynasty.ca",
       "url": "wangdynasty.ca",
       "class": "Class of 2030",
-      "description": "pulling an all nighter"
+      "description": "pulling an all nighter",
+      "icon": ""
     },
     {
       "name": "eric wu",
       "website": "https://ericwu.work",
       "url": "ericwu.work",
       "class": "Class of 2030",
-      "description": ""
+      "description": "",
+      "icon": ""
     },
     {
       "name": "sean chan-sato",
       "website": "https://seanchansato.work",
       "url": "seanchansato.work",
       "class": "Class of 2030",
-      "description": ""
+      "description": "",
+      "icon": ""
     }
   ]
 }
