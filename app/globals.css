@@ -12,3 +12,59 @@ html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   display: none;
 }
+
+/* ── Noise/grain texture overlay ── */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* ── Blueprint grid lines (subtle) ── */
+.grid-overlay {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* ── Star glow effect ── */
+.star-glow {
+  filter: drop-shadow(0 0 30px rgba(196,168,130,0.35));
+  transition: filter 0.6s ease;
+}
+.star-glow:hover {
+  filter: drop-shadow(0 0 50px rgba(196,168,130,0.55));
+}
+
+/* ── Member row hover ── */
+.member-row {
+  transition: background-color 0.3s ease;
+}
+.member-row:hover {
+  background-color: rgba(255,255,255,0.02);
+}
+
+/* ── Brass underline animation ── */
+.brass-underline {
+  position: relative;
+}
+.brass-underline::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #C4A882;
+  transition: width 0.3s ease;
+}
+.brass-underline:hover::after {
+  width: 100%;
+}

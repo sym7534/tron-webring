@@ -1,17 +1,19 @@
 import type { Metadata } from "next";
-import { Playfair_Display, Inter } from "next/font/google";
+import { Instrument_Serif, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import members from "@/data/members.json";
 
-const playfair = Playfair_Display({
+const instrumentSerif = Instrument_Serif({
+  weight: "400",
   subsets: ["latin"],
-  variable: "--font-playfair",
+  variable: "--font-instrument-serif",
   display: "swap",
 });
 
-const inter = Inter({
+const ibmPlexMono = IBM_Plex_Mono({
+  weight: ["400", "500", "600"],
   subsets: ["latin"],
-  variable: "--font-inter",
+  variable: "--font-ibm-plex-mono",
   display: "swap",
 });
 
@@ -80,11 +82,11 @@ export default function RootLayout({
   `;
 
   return (
-    <html lang="en" className={`${playfair.variable} ${inter.variable}`}>
+    <html lang="en" className={`${instrumentSerif.variable} ${ibmPlexMono.variable}`}>
       <head>
         <script dangerouslySetInnerHTML={{ __html: navScript }} />
       </head>
-      <body className="font-sans bg-[#FDFCF9] text-[#1A1A1A] overflow-x-hidden">
+      <body className="font-sans bg-dark text-light overflow-x-hidden">
         {children}
       </body>
     </html>

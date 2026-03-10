@@ -9,8 +9,23 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-inter)", "system-ui", "sans-serif"],
-        serif: ["var(--font-playfair)", "Georgia", "serif"],
+        sans: ["var(--font-ibm-plex-mono)", "monospace"],
+        serif: ["var(--font-instrument-serif)", "Georgia", "serif"],
+        mono: ["var(--font-ibm-plex-mono)", "monospace"],
+      },
+      colors: {
+        brass: "#C4A882",
+        dark: "#0A0A0A",
+        light: "#E8E8E8",
+      },
+      animation: {
+        "glow-pulse": "glowPulse 4s ease-in-out infinite",
+      },
+      keyframes: {
+        glowPulse: {
+          "0%, 100%": { filter: "drop-shadow(0 0 20px rgba(196,168,130,0.3))" },
+          "50%": { filter: "drop-shadow(0 0 40px rgba(196,168,130,0.5))" },
+        },
       },
     },
   },

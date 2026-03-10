@@ -16,8 +16,8 @@ export default function RandomSiteButton() {
         text="Visit a random website →"
         speed={3}
         delay={1}
-        color="#999"
-        shineColor="#1A1A1A"
+        color="#555"
+        shineColor="#C4A882"
         spread={120}
         className="text-[14px] md:text-[15px] font-medium font-serif italic"
       />
