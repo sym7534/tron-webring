@@ -18,7 +18,7 @@ export default function Home() {
     <div className="min-h-screen grid-overlay flex flex-col">
 
       {/* ── Header ── */}
-      <header className="flex items-center justify-between px-6 md:px-20 py-6 border-b border-white/[0.08]">
+      <header className="sticky top-0 z-50 bg-dark/80 backdrop-blur-md flex items-center justify-between px-6 md:px-20 py-6 border-b border-white/[0.08]">
         <div className="flex items-center gap-4">
           <img src="/logowhitetransp.png" alt="Tron" className="h-8" />
           <span className="text-[11px] tracking-[3px] uppercase text-light/70 font-mono">
@@ -97,17 +97,15 @@ export default function Home() {
 
       {/* ── Stats ── */}
       <div className="mx-6 md:mx-20 border-t border-white/[0.08]">
-        <div className="py-4 flex items-center gap-6 text-[12px] text-light/50 font-mono tracking-[1px] uppercase">
-          <span>
-            Total members:{" "}
-            <span className="text-brass font-medium">{members.sites.length}</span>
-          </span>
-          <span>
-            Grad classes:{" "}
-            <span className="text-brass font-medium">
-              {new Set(members.sites.map((s) => s.class)).size}
+        <div className="py-4 flex items-center gap-2 text-[12px] text-light/50 font-mono tracking-[1px] uppercase">
+          {[...new Set(members.sites.map((s) => s.class))].map((cls, i) => (
+            <span key={cls}>
+              {i > 0 && <span> &amp; </span>}
+              <span className="text-brass">{cls}</span>
             </span>
-          </span>
+          ))}
+          <span>&middot;</span>
+          <span>{members.sites.length} Members</span>
         </div>
       </div>
 
@@ -150,9 +148,11 @@ export default function Home() {
                   </a>
                 </div>
               </div>
-              <span className="hidden md:block text-[13px] text-light/35 font-serif italic flex-1 px-4 truncate text-center">
-                {member.description}
-              </span>
+              {member.description && (
+                <span className="hidden md:block text-[13px] text-light/35 font-serif italic flex-1 px-4 truncate text-center">
+                  {member.description}
+                </span>
+              )}
               <span className="text-[12px] text-light/50 font-mono tracking-[1px] shrink-0 text-right">
                 {member.class}
               </span>
@@ -170,10 +170,15 @@ export default function Home() {
           >
             Open
           </a>
-          <span className="text-[13px] text-light/60 font-mono">
-            The Tron Ring is open to all UWaterloo Mechatronics Engineering
-            students and alumni. Add your personal website to join.
-          </span>
+          <div className="flex flex-col gap-1">
+            <span className="text-[13px] text-light/60 font-mono">
+              The Tron Ring is open to all UWaterloo Mechatronics Engineering
+              students and alumni.
+            </span>
+            <span className="text-[12px] text-light/35 font-mono">
+              Add your site to members.json and open a PR to join.
+            </span>
+          </div>
         </div>
       </section>
 
