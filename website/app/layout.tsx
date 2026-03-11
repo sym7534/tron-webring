@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Instrument_Serif, IBM_Plex_Mono } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 import members from "@/data/members.json";
 
@@ -88,6 +89,7 @@ export default function RootLayout({
       </head>
       <body className="font-sans bg-dark text-light overflow-x-hidden">
         {children}
+        <Analytics />
       </body>
     </html>
   );
