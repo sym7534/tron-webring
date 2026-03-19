@@ -33,7 +33,7 @@ export default function Home() {
             Join
           </a>
           <a
-            href="https://github.com/sym7534/tron-webring/tree/main/public"
+            href="https://github.com/sym7534/tron-webring/tree/main/website/public"
             className="border border-white/[0.08] text-light/60 text-[11px] tracking-[2px] uppercase px-5 py-2 font-mono hover:border-white/20 hover:text-light/70 transition-all duration-300"
           >
             Assets
